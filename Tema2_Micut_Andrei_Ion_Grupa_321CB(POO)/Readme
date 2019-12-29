@@ -1,0 +1,17 @@
+
+Micut Andrei-Ion, Grupa 321CB
+
+
+											Tema 2
+										~Termostat inteligent~
+
+
+	Am debutat crearea temei prin realizarea clasei House in care mi-am retinut numarul de camere, o lista de camere de tipul List<Room>, temperatura globala si timpul de referinta. Mi-am creat constructorul clasei ce imi va initializa fiecare camp in parte al clasei. Am continuat scrierea codului prin realizarea get-erilor si set-erilor. Ulterior, mi-am creat metoda observe ce primeste ca parametrii id-ul device-ului, temperatura si timpul. Mai intai, caut in lista de camere, camera cu id-ul device-ului corespunzator celui primit ca parametru, iar dupa ce l-am gasit retin camera. Urmeaza sa introduc in baza de date temperatura si ora la care a fost inregistrata aceasta, iar apoi o asociez camerei corespunzatoare. Urmeaza crearea functiei trigger care imi va porni centrala electrica in functie de algoritmul prezentat in cerinta. Voi fiecare camera in parte si realizez media ponderata a temperaturilor, iar apoi returnez true daca trebuie pornita centrala sau false in caz contrar. In metoda list voi realiza afisarea temperaturilor din camere sortate crescator care se afla intr-un anumit interval orar. Parcurg fiecare camera in parte pana cand voi gasi camera data ca parametru, filtrez baza de date pentru acele intrari care se afla in intervalul mentionat mai sus, parcurg baza de date si realizez afsarea cu ajutorul unei instante, formatter, din clasa NumberFormat pentru a putea afisa si al doilea 0 care se afla dupa virgula. Clasa DecimalFormat este subclasa clasei NumberFormat.
+
+	In clasa Room voi retine informatiile referitoare la camera, spre exemplu: id-ul camerei, id-ul device-ului, suprafata camerei si o lista inlantuita pentru senzor. Am debutat realizarea metodelor cu implementarea constructorului cu ajutorul caruia am initializat fiecare camp al clasei. Am continuat realizarea camerei prin implementarea get-erilor si set-erilor. Ulterior, am realizat metoda add ce imi va introduce in baza de date intrarea care contine temperatura si timpul pentru fiecare camera in parte, prin intermediul senzorului.  Urmatoarea metoda imi va lua temperaturile dintr-un bucket care se afla in intervalul corespunzator. Realizez adaugarea, sortarea, eliminarea duplicatelor si finalizarea stergerii. Datoria metodei urmatoare, Get_Temps, voi putea avea acces la temperaturile ce se gasesc in intervalul corespunzator. Identific bucket-ul de inceput, il identific si pe cel de final si realizez adaugarea din fiecare bucket in parte.
+
+	In clasa Entry realizez baza de date in care vor fi introduse temperaturile camerei la un anumit timp. Ulterior, realizez set-erele si get-erele pentru fiecare camp in parte. Metoda getHour imi va returna un bucket, iar metoda compareTo o modelez pentru a realiza sortarea temperaturilor din camera.
+
+	In clasa Defines, in vederea usurarii scrierii, mi-am definit constantele pe care le-am folosit in program si am realizat si fisierul in care voi afisa. Am realizat un set-er pentru timpul de inceput. Metoda floor ini va returna partea intreaga inferioara a timpului de inceput, iar metoda ceil partea intreaga superioara a timpului de sfarsit.
+
+	Clasa Main imi va realiza rularea cu succes a temei. Mai intai, realizez deschiderea fisierului de intrare, apoi il citesc si imi va executa instructiunile corespunzatoare una cate una. La sfarsit, realizez inchiderea fisierului de intrare, iar in metoda main apelez functiile corespunzatoare deschiderii, citirii si inchiderii fisierului de input.
